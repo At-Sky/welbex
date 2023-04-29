@@ -73,6 +73,16 @@
       &:nth-child(2) {
         margin-top: 37px;
       }
+
+      & > a {
+        &:hover {
+          background-image: linear-gradient(92deg, #FCB045 27.14%, #FF3F78 121.36%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          text-fill-color: transparent;
+        }
+      }
     }
 
     &__title {
@@ -112,13 +122,13 @@
         line-height: 17px;
       }
 
-      &:hover {
-        background-image: linear-gradient(92deg, #FCB045 27.14%, #FF3F78 121.36%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        text-fill-color: transparent;
-      }
+      //&:hover {
+      //  background-image: linear-gradient(92deg, #FCB045 27.14%, #FF3F78 121.36%);
+      //  -webkit-background-clip: text;
+      //  -webkit-text-fill-color: transparent;
+      //  background-clip: text;
+      //  text-fill-color: transparent;
+      //}
 
       &_contacts {
         display: flex;
@@ -127,6 +137,16 @@
 
         @media (max-width: 400px) {
           gap: 10px;
+        }
+
+        & > a {
+          &:hover {
+            background-image: linear-gradient(92deg, #FCB045 27.14%, #FF3F78 121.36%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+          }
         }
       }
     }
