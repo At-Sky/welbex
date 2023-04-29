@@ -1,0 +1,152 @@
+@import "variables";
+
+.header {
+  display: flex;
+  align-items: center;
+  padding-top: 11px;
+  justify-content: space-between;
+
+  z-index: 100;
+
+  @media (width: 1440px) {
+    justify-content: unset;
+  }
+
+  @media (max-width: 950px) {
+    position: fixed;
+    width: 100%;
+    background: #1E1E1E;
+    @include adaptive-paddings(20, 20, 70, 16);
+  }
+
+  .logo__container {
+    position: relative;
+    cursor: pointer;
+  }
+
+  .navbar {
+    display: flex;
+    gap: 32px;
+    margin-left: 52px;
+    padding-top: 4px;
+
+    //950 modalka
+
+    @media (max-width: 950px) {
+      display: none;
+    }
+
+    @media (max-width: 1439px) {
+      margin-left: auto;
+    }
+
+    &__link {
+      cursor: pointer;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+
+      /* light text */
+
+      color: #E4E5EA;
+
+
+      &:hover {
+        background-image: linear-gradient(92deg, #FCB045 27.14%, #FF3F78 121.36%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+      }
+    }
+  }
+
+  &__phone {
+    margin-left: 137px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: right;
+    padding-top: 4px;
+    flex-grow: 1;
+
+    /* light text */
+
+    color: #E4E5EA;
+
+    @media (max-width: 1439px) {
+      margin-left: auto;
+    }
+
+    @media (max-width: 1200px) {
+      display: none;
+    }
+  }
+
+  .socials {
+    margin-left: 47px;
+    display: flex;
+    justify-content: right;
+    gap: 29px;
+
+    @media (max-width: 1439px) {
+      margin-left: auto;
+    }
+
+    @media (max-width: 950px) {
+      display: none;
+    }
+  }
+
+  &__about {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 12px;
+    white-space: nowrap;
+
+    color: #E4E5EA;
+
+    @media (max-width: 1000px) {
+      display: none;
+    }
+  }
+
+  &__burger {
+    margin: auto 0;
+    width: 32px;
+    height: 32px;
+    padding: 7px 4px;
+    display: none;
+    cursor: pointer;
+
+    @media (max-width: 950px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    & .line {
+      display: block;
+      width: 21px;
+      height: 3px;
+      border-radius: 40px;
+      background: white;
+
+      @media (max-width: 950px) {
+        background: #ffffff;
+      }
+
+      &:last-child {
+        width: 16px;
+      }
+    }
+  }
+}

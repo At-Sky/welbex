@@ -1,0 +1,17 @@
+@import 'reset';
+@import 'variables';
+@import 'font';
+
+* {
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  @include adaptive-paddings(46, 0, 150, 0);
+  background: #0E1014;
+
+  @media (max-width: 950px) {
+    padding: 0;
+  }
+}
+
